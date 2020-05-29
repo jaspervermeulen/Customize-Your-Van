@@ -38,6 +38,7 @@
   border: 3px solid black;
   font-size: 18px;
   background-color: #ecede0;
+  cursor: pointer;
 }
 
 .button_clearAll {
