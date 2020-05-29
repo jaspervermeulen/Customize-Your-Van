@@ -226,6 +226,11 @@
 }
 
 @media only screen and (max-width: 1440px) {
+
+  .title {
+    margin-top: 35px;
+  }
+
   .options {
     position: absolute;
     top: 60vh;
