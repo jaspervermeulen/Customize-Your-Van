@@ -1,243 +1,199 @@
-.container {
-  background-color: #ecede0;
-  display: flex;
+*{
+  box-sizing: border-box;
+}
+
+html{
+  box-sizing: inherit;
+  font-size: 62.5%;
+}
+
+.wrapper_noti{
+  display: none;
+}
+
+html, body{
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden
+}
+
+.container{
+  width: 98rem;
+  margin: 0rem auto;
   justify-content: center;
 }
 
-.van {
-  transition: all 2s;
-}
-
-.title {
-  margin-top: 70px;
-}
-
-.options {
+.promo{
   position: absolute;
-  top: 55vh;
-  right: 20vw;
-  transform: translateY(-50%);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  bottom: 30px;
+  left: 30px;
 }
 
-.button_bed,
-.button_kitchen,
-.button_board,
-.button_flag,
-.button_solar,
-.button_lamps,
-.button_stickers,
-.button_windows,
-.button_rug,
-.button_cabinet,
-.button_clearAll {
-  text-align: left;
-  padding: 24px;
-  margin: 10px;
-  border: 3px solid black;
-  font-size: 18px;
-  background-color: #ecede0;
+.title{
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0 2rem 0;
+}
+
+.options{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 600px;
+  margin: 0rem auto;
+}
+
+.button_bed, .button_flip, .button_kitchen, .button_board, .button_flag, .button_solar, .button_lamps, .button_stickers, .button_windows, .button_rug, .button_cabinet, .button_clearAll{
+  padding: 1rem 1.3rem;
+  margin: 1rem;
+  border: 0.2rem solid #000000;
+  background-color: white;
+  border-radius: 10px;
+  outline: none;
   cursor: pointer;
 }
 
-.button_clearAll {
-  grid-column-start: 1;
-  grid-column-end: 3;
+
+.van_frame, .van_bed, .van_kitchen, .van_board, .van_cabinet, .van_lamps, .van_rug, .van_solar, .van_stickers, .van_window, .van_flag{
+  width: 98rem;
+  height: 71rem;
+  margin-top: 8rem;
+  transform: scaleX(1);
 }
 
 .van_board {
   position: absolute;
-  top: 23vh;
-  left: 6vw;
   z-index: -101;
   display: none;
+
 }
 
 .van_frame {
   position: absolute;
-  top: 23vh;
-  left: 6vw;
   z-index: -100;
+
 }
 
 .van_bed {
   position: absolute;
-  top: 23vh;
-  left: 6vw;
   z-index: -99;
   display: none;
+
 }
 
 .van_kitchen {
   position: absolute;
-  top: 23vh;
-  left: 6vw;
   z-index: -98;
   display: none;
+
 }
 
 .van_stickers {
   position: absolute;
-  top: 23vh;
-  left: 6vw;
   z-index: -97;
   display: none;
+
 }
 
 .van_window {
   position: absolute;
-  top: 23vh;
-  left: 6vw;
   z-index: -96;
   display: none;
+
 }
 
 .van_cabinet {
   position: absolute;
-  top: 23vh;
-  left: 6vw;
   z-index: -95;
   display: none;
+
 }
 
 .van_lamps {
   position: absolute;
-  top: 23vh;
-  left: 6vw;
   z-index: -94;
   display: none;
+
 }
 
 .van_rug {
   position: absolute;
-  top: 23vh;
-  left: 6vw;
   z-index: -93;
   display: none;
+
 }
 
 .van_solar {
   position: absolute;
-  top: 23vh;
-  left: 6vw;
   z-index: -92;
   display: none;
+
 }
 
 .van_flag {
   position: absolute;
-  top: 23vh;
-  left: 6vw;
   z-index: -102;
   display: none;
+
 }
 
-@media only screen and (max-width: 1700px) {
-  .options {
-    right: 10vw;
-  }
+@media screen and (max-width: 980px) {
 
-  .van_board {
-    position: absolute;
-    top: 23vh;
-    left: 0vw;
-    z-index: -101;
-    display: none;
-  }
 
-  .van_frame {
-    position: absolute;
-    top: 23vh;
-    left: 0vw;
-    z-index: -100;
+  .container{
+    width: 72rem;
+    margin: 0rem auto;
+    justify-content: center;
   }
-
-  .van_bed {
-    position: absolute;
-    top: 23vh;
-    left: 0vw;
-    z-index: -99;
-    display: none;
-  }
-
-  .van_kitchen {
-    position: absolute;
-    top: 23vh;
-    left: 0vw;
-    z-index: -98;
-    display: none;
-  }
-
-  .van_stickers {
-    position: absolute;
-    top: 23vh;
-    left: 0vw;
-    z-index: -97;
-    display: none;
-  }
-
-  .van_window {
-    position: absolute;
-    top: 23vh;
-    left: 0vw;
-    z-index: -96;
-    display: none;
-  }
-
-  .van_cabinet {
-    position: absolute;
-    top: 23vh;
-    left: 0vw;
-    z-index: -95;
-    display: none;
-  }
-
-  .van_lamps {
-    position: absolute;
-    top: 23vh;
-    left: 0vw;
-    z-index: -94;
-    display: none;
-  }
-
-  .van_rug {
-    position: absolute;
-    top: 23vh;
-    left: 0vw;
-    z-index: -93;
-    display: none;
-  }
-
-  .van_solar {
-    position: absolute;
-    top: 23vh;
-    left: 0vw;
-    z-index: -92;
-    display: none;
-  }
-
-  .van_flag {
-    position: absolute;
-    top: 23vh;
-    left: 0vw;
-    z-index: -102;
-    display: none;
+  
+  .van_frame, .van_bed, .van_kitchen, .van_board, .van_cabinet, .van_lamps, .van_rug, .van_solar, .van_stickers, .van_window, .van_flag{
+    width: 72rem;
+    height: 47rem;
+    margin-top: 12rem;
+    transform: scaleX(1);
   }
 }
 
-@media only screen and (max-width: 1440px) {
 
-  .title {
-    margin-top: 35px;
+@media screen and (max-width: 720px) {
+
+  .container{
+    width: 48rem;
+    margin: 0rem auto;
+    justify-content: center;
   }
 
-  .options {
-    position: absolute;
-    top: 60vh;
-    right: 10vw;
-    transform: translateY(-50%);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+.options{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 480px;
+  margin: 0rem auto;
+}
+  
+  .van_frame, .van_bed, .van_kitchen, .van_board, .van_cabinet, .van_lamps, .van_rug, .van_solar, .van_stickers, .van_window, .van_flag{
+    width: 48rem;
+    height: 32rem;
+    margin-top: 16rem;
+    transform: scaleX(1);
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .title, .van, .options, .promo{
+    display: none;
+  }
+
+  .container{
+    width: 100vw;;
+    margin: 0rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapper_noti{
+    display: block;
   }
 }
